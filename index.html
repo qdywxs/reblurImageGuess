@@ -15,7 +15,6 @@
   </style>
 
   <script>
-    //为了讲解原理，这里我们依然将 JS 代码放在此处。
     window.onload = init;
     function init() {
       var images = document.getElementsByTagName("img"); 
@@ -24,29 +23,11 @@
       }  
     }
 
-    // function showAnswer(eventObj) {
-    //   var image = eventObj.target;
-    //   var name = image.id;
-    //   name = name + ".png";
-    //   image.src = name;
-    // //以上代码与游戏（2）一致。
-
-    //   setTimeout (reblur,3000,image);  //但现在向用户显示清晰版图像时，同时调用 setTimeout 来创建一个将在3秒后触发的事件。
-    // }
-
-    // function reblur(image) {
-    //   var name = image.id;
-    //   name = name + "blur.png";
-    //   image.src = name;
-    // }  //这样，这个处理程序被调用时，将把要重新变模糊的图像传递给它。
-
-
     function showAnswer(eventObj) {
       var image = eventObj.target;
       var name = image.id;
       name = name + ".png";
       image.src = name;
-      //以上代码与游戏（2）一致。
 
       setTimeout (function() {
         var name = image.id;
@@ -54,8 +35,6 @@
         image.src = name;
       }  ,3000); 
     }
-
-
   </script>
 
 </head>
